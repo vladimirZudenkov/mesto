@@ -1,0 +1,14 @@
+.user__text {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+
+@media screen and (max-width: 898px) {
+  .user__text {
+    padding-left: 46px;
+    justify-content: end;
+  }
+}

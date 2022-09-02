@@ -1,0 +1,15 @@
+.user__info {
+  max-width: 336px;
+  margin-left: 30px;
+  width: 100%;
+}
+
+@media screen and (max-width: 898px) {
+  .user__info {
+    display: flex;
+    flex-direction: column;
+    max-width: 282px;
+    margin-top: 26px;
+    margin-left: 0;
+  }
+}

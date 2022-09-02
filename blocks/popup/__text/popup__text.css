@@ -1,0 +1,19 @@
+.popup__text {
+  border-style: none;
+  border-bottom: 1px solid rgb(0,0,0, 0.2);
+  max-width: 358px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  padding-bottom: 13px;
+}
+
+.popup__text:nth-child(3) {
+  padding-top: 26px;
+}

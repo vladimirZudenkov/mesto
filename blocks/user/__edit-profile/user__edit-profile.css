@@ -1,0 +1,27 @@
+.user__edit-profile {
+  background-image: url(../../../images/Edit\ pen.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  box-sizing: border-box;
+  background-position: center;
+  max-width: 24px;
+  height: 24px;
+  border: 1px solid #FFFFFF;
+  cursor: pointer;
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  padding: 0;
+}
+
+.user__edit-profile:hover {
+  opacity: .6;
+}
+
+@media screen and (max-width: 898px) {
+  .user__edit-profile {
+    height: 18px;
+    max-width: 18px;
+    margin-left: 14px;
+  }
+}

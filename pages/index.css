@@ -1,0 +1,51 @@
+/* импорт глобальных стилей и шрифта*/
+@import url(../vendor/normalize.css);
+@import url(../fonts/fonts.css);
+@import url(../blocks/page/page.css);
+
+/* импорт стилей body-root */
+@import url(../blocks/body-root/body-root.css);
+
+/* импорт стилей header */
+@import url(../blocks/header/__logo/header__logo.css);
+@import url(../blocks/header/header.css);
+
+/* импорт стилей content */
+@import url(../blocks/content/content.css);
+
+/* импорт стилей user */
+@import url(../blocks/user/__add-item.css/user__add-item.css);
+@import url(../blocks/user/__avatar/user__avatar.css);
+@import url(../blocks/user/__edit-profile/user__edit-profile.css);
+@import url(../blocks/user/__info/user__info.css);
+@import url(../blocks/user/__owner/user__owner.css);
+@import url(../blocks/user/__profession/user__profession.css);
+@import url(../blocks//user/__profile/user__profile.css);
+@import url(../blocks/user/__text/user__text.css);
+@import url(../blocks/user/__title/user__title.css);
+@import url(../blocks/user/user.css);
+
+/* импорт стилей cards */
+@import url(../blocks/cards/__container/cards__container.css);
+@import url(../blocks/cards/__item/cards__item.css);
+@import url(../blocks/cards/__item-heading/cards__item-heading.css);
+@import url(../blocks/cards/__item-like/cards__item-like.css);
+@import url(../blocks/cards/__item-picture/cards__item-picture.css);
+@import url(../blocks/cards/__item-wrapper/cards__item-wrapper.css);
+@import url(../blocks/cards/cards.css);
+
+/* импорт стилей footer */
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__copyright/footer__copyright.css);
+
+/* импорт стилей popup */
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/popup/__field/popup__field.css);
+@import url(../blocks/popup/__button-close/popup__button-close.css);
+@import url(../blocks/popup/__text/popup__text.css);
+@import url(../blocks/popup/__button-save/popup__button-save.css);
+@import url(../blocks/popup/__heading/popup__heading.css);
+@import url(../blocks/popup/__text/_name/popup__text_name.css);
+@import url(../blocks/popup/__text/_description/popup__text_description.css);
+@import url(../blocks/popup/_opened/popup_opened.css);
+

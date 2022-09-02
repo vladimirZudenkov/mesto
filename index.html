@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Красивые места</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+
+<body class="body-root">
+  <div class="page">
+    <header class="header">
+      <div class="header__logo"></div>
+    </header>
+
+    <main class="content">
+      <section class="user">
+        <div class="user__profile">
+          <div class="user__owner">
+            <img class="user__avatar" src="./images/custo.jpg" alt="Аватар">
+            <div class="user__info">
+              <div class="user__text">
+                <h1 class="user__title">Жак-Ив Кусто</h1>
+                <button class="user__edit-profile" type="button"></button>
+              </div>
+              <p class="user__profession">Исследователь океана</p>
+            </div>
+          </div>
+          <button class="user__add-item" type="button"></button>
+        </div>
+      </section>
+
+      <section class="cards">
+        <ul class="cards__container">
+          <li class="cards__item">
+            <img class="cards__item-picture" src="./images/Elbrus.png" alt="Эльбрус на закате">
+            <div class="cards__item-wrapper">
+              <h2 class="cards__item-heading">Гора Эльбрус</h2>
+              <button class="cards__item-like" type="button"></button>
+            </div>
+          </li>
+          <li class="cards__item">
+            <img class="cards__item-picture" src="./images/Monastery.jpg" alt="Старый монастырь">
+            <div class="cards__item-wrapper">
+              <h2 class="cards__item-heading">Карачаево-Черкессия</h2>
+              <button class="cards__item-like" type="button"></button>
+            </div>
+          </li>
+          <li class="cards__item">
+            <img class="cards__item-picture" src="./images/Mount.jpg" alt="Домбай">
+            <div class="cards__item-wrapper">
+              <h2 class="cards__item-heading">Домбай</h2>
+              <button class="cards__item-like" type="button"></button>
+            </div>
+          </li>
+          <li class="cards__item">
+            <img class="cards__item-picture" src="./images/Elbrus.png" alt="Эльбрус на закате">
+            <div class="cards__item-wrapper">
+              <h2 class="cards__item-heading">Гора Эльбрус</h2>
+              <button class="cards__item-like" type="button"></button>
+            </div>
+          </li>
+          <li class="cards__item">
+            <img class="cards__item-picture" src="./images/Monastery.jpg" alt="Старый монастырь">
+            <div class="cards__item-wrapper">
+              <h2 class="cards__item-heading">Карачаево-Черкессия</h2>
+              <button class="cards__item-like" type="button"></button>
+            </div>
+          </li>
+          <li class="cards__item">
+            <img class="cards__item-picture" src="./images/Mount.jpg" alt="Домбай">
+            <div class="cards__item-wrapper">
+              <h2 class="cards__item-heading">Домбай</h2>
+              <button class="cards__item-like" type="button"></button>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__copyright"> &copy;2020 Mesto Russia</p>
+    </footer>
+
+    <section class="popup">
+      <form class="popup__field" name="modal-window">
+        <h2 class="popup__heading">Редактировать профиль</h2>
+        <input class="popup__text popup__text_name" type="text" name="author-name" value="">
+        <input class="popup__text popup__text_description" name="autor-descr" type="text" value="">
+        <input class="popup__button-save" type="submit" name="submit-btn" value="Сохранить">
+        <button class="popup__button-close" type="button"></button>
+      </form>
+    </section>
+  </div>
+  <script src="./javascript/script.js"></script>
+</body>
+</html>

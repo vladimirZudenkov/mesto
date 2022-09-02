@@ -1,0 +1,16 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 880px;
+  min-width: 320px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+@media screen and (max-width: 898px) {
+  .content {
+    padding-left: 19px;
+    padding-right: 19px;
+  }
+}

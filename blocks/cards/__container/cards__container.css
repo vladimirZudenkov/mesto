@@ -1,0 +1,20 @@
+.cards__container {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px 18px;
+}
+
+@media screen and (max-width: 898px) {
+  .cards__container {
+   grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cards__container {
+   grid-template-columns: 1fr;
+  }
+}
