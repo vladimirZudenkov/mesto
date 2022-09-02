@@ -3,14 +3,14 @@ let openButton = document.querySelector('.user__edit-profile'),
     closeButton = overlay.querySelector('.popup__button-close'),
     autor = document.querySelector('.user__title'),
     jobeDescr = document.querySelector('.user__profession'),
-    nameInput = document.querySelector('.popup__text_name'),
-    jobeInput = document.querySelector('.popup__text_description'),
+    autorNameInput = overlay.querySelector('.popup__text_name'),
+    autorJobeInput = overlay.querySelector('.popup__text_description'),
     formElement = overlay.querySelector('.popup__field');
 
 function openModal() {
   overlay.classList.add('popup_opened');
-  nameInput.value = autor.textContent;
-  jobeInput.value = jobeDescr.textContent;
+  autorNameInput.value = autor.textContent;
+  autorJobeInput.value = jobeDescr.textContent;
 }
 
 function closeModal() {
@@ -19,8 +19,8 @@ function closeModal() {
 
 function handleFormSubmit(evt) {
   evt.preventDefault();
-  autor.textContent = nameInput.value;
-  jobeDescr.textContent = jobeInput.value;
+  autor.textContent = autorNameInput.value;
+  jobeDescr.textContent = autorJobeInput.value;
   overlay.classList.remove('popup_opened');
 }
 
