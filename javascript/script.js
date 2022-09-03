@@ -3,8 +3,8 @@ let openButton = document.querySelector('.user__edit-profile'),
     closeButton = overlay.querySelector('.popup__button-close'),
     autor = document.querySelector('.user__title'),
     jobeDescr = document.querySelector('.user__profession'),
-    autorNameInput = overlay.querySelector('.popup__text_name'),
-    autorJobeInput = overlay.querySelector('.popup__text_description'),
+    autorNameInput = overlay.querySelector('.popup__input_text_name'),
+    autorJobeInput = overlay.querySelector('.popup__input_text_description'),
     formElement = overlay.querySelector('.popup__field');
 
 function openModal() {

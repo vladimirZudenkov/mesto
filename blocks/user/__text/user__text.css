@@ -8,7 +8,8 @@
 
 @media screen and (max-width: 898px) {
   .user__text {
-    padding-left: 46px;
-    justify-content: end;
+     justify-content: normal;
+     gap: 10px;
+     padding-left: 46px;
   }
 }

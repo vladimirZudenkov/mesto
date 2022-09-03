@@ -1,4 +1,4 @@
-.user__add-item {
+.user__button {
   background-image: url(../../../images/edit_plus.svg);
   border: 2px solid #FFFFFF;
   border-radius: 2px;
@@ -14,12 +14,12 @@
   padding: 0;
 }
 
-.user__add-item:hover {
+.user__button:hover {
   opacity: .6;
 }
 
 @media screen and (max-width: 898px) {
-  .user__add-item {
+  .user__button {
     width: 282px;
     margin-top: 36px;
   }
