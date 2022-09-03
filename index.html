@@ -9,7 +9,6 @@
 </head>
 
 <body class="body-root">
-  <div class="page">
     <header class="header">
       <div class="header__logo"></div>
     </header>
@@ -22,12 +21,12 @@
             <div class="user__info">
               <div class="user__text">
                 <h1 class="user__title">Жак-Ив Кусто</h1>
-                <button class="user__edit-profile" type="button"></button>
+                <button class="user__edit-profile" type="button" aria-label="Редактировать профиль"></button>
               </div>
               <p class="user__profession">Исследователь океана</p>
             </div>
           </div>
-          <button class="user__add-item" type="button"></button>
+          <button class="user__add-item" type="button" aria-label="Добавить карточку"></button>
         </div>
       </section>
 
@@ -83,16 +82,17 @@
       <p class="footer__copyright"> &copy;2020 Mesto Russia</p>
     </footer>
 
-    <section class="popup">
-      <form class="popup__field" name="modal-window">
+    <div class="popup">
+      <div class="popup__container">
         <h2 class="popup__heading">Редактировать профиль</h2>
+      <form class="popup__field" name="modal-window">  
         <input class="popup__text popup__text_name" type="text" name="author-name" value="">
         <input class="popup__text popup__text_description" name="autor-descr" type="text" value="">
         <input class="popup__button-save" type="submit" name="submit-btn" value="Сохранить">
         <button class="popup__button-close" type="button"></button>
       </form>
-    </section>
-  </div>
+    </div>
+    </div>
   <script src="./javascript/script.js"></script>
 </body>
 </html>
