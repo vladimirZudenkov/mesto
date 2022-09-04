@@ -21,7 +21,8 @@ function handleFormSubmit(evt) {
   evt.preventDefault();
   autor.textContent = autorNameInput.value;
   jobeDescr.textContent = autorJobeInput.value;
-  overlay.classList.remove('popup_opened');
+  //overlay.classList.remove('popup_opened');
+  closeModal(); // думаю так правильнее 
 }
 
 openButton.addEventListener('click', openModal);

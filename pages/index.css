@@ -13,7 +13,7 @@
 @import url(../blocks/content/content.css);
 
 /* импорт стилей user */
-@import url(../blocks/user/__button.css/user__button.css);
+@import url(../blocks/user/__button/user__button.css);
 @import url(../blocks/user/__avatar/user__avatar.css);
 @import url(../blocks/user/__edit-profile/user__edit-profile.css);
 @import url(../blocks/user/__info/user__info.css);
