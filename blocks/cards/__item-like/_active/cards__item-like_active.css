@@ -1,0 +1,19 @@
+.cards__item-like_active {
+  max-width: 22px;
+  height: 19px;
+  background-image: url(../../../../images/heart_lkd.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-color: transparent;
+  border-style:none;
+  outline: none;
+  padding: 0;
+
+}
+
+.cards__item-like_active:hover {
+  opacity: .8;
+  cursor: pointer;
+}
+

@@ -32,48 +32,13 @@
 
       <section class="cards">
         <ul class="cards__container">
-          <li class="cards__item">
+          <!-- <li class="cards__item">
             <img class="cards__item-picture" src="./images/Elbrus.jpg" alt="Эльбрус на закате">
             <div class="cards__item-wrapper">
               <h2 class="cards__item-heading">Гора Эльбрус</h2>
               <button class="cards__item-like" type="button"></button>
             </div>
-          </li>
-          <li class="cards__item">
-            <img class="cards__item-picture" src="./images/Monastery.jpg" alt="Старый монастырь">
-            <div class="cards__item-wrapper">
-              <h2 class="cards__item-heading">Карачаевск</h2>
-              <button class="cards__item-like" type="button"></button>
-            </div>
-          </li>
-          <li class="cards__item">
-            <img class="cards__item-picture" src="./images/Mount.jpg" alt="Домбай">
-            <div class="cards__item-wrapper">
-              <h2 class="cards__item-heading">Домбай</h2>
-              <button class="cards__item-like" type="button"></button>
-            </div>
-          </li>
-          <li class="cards__item">
-            <img class="cards__item-picture" src="./images/Elbrus.jpg" alt="Эльбрус на закате">
-            <div class="cards__item-wrapper">
-              <h2 class="cards__item-heading">Гора Эльбрус</h2>
-              <button class="cards__item-like" type="button"></button>
-            </div>
-          </li>
-          <li class="cards__item">
-            <img class="cards__item-picture" src="./images/Monastery.jpg" alt="Старый монастырь">
-            <div class="cards__item-wrapper">
-              <h2 class="cards__item-heading">Карачаево-Черкессия</h2>
-              <button class="cards__item-like" type="button"></button>
-            </div>
-          </li>
-          <li class="cards__item">
-            <img class="cards__item-picture" src="./images/Mount.jpg" alt="Домбай">
-            <div class="cards__item-wrapper">
-              <h2 class="cards__item-heading">Домбай</h2>
-              <button class="cards__item-like" type="button"></button>
-            </div>
-          </li>
+          </li> -->
         </ul>
       </section>
     </main>
@@ -93,6 +58,42 @@
       </form>
       </div>
     </div>
+
+
+
+    <div class="new-card popup">
+      <div class="new-card__container">
+      <h2 class="new-card__heading">Новое место</h2>
+      <form class="new-card__field" name="new-card-modal">
+        <input class="new-card__text new-card__text_name" type="text" name="new-place" value="Название">
+        <input class="new-card__text new-card__text_link" name="autor-descr" type="text" value="Ссылка на картинку">
+        <input class="new-card__button-save" type="submit" name="submit-btn" value="Создать">
+        <button class="new-card__button-close" type="button"></button>
+      </form>
+    </div>
+    </div>
+
+
+    <div class="preview-card popup">
+      <div class="preview-card__field">
+        <img class="preview-card__picture" src="#" alt="заготовка">
+        <p class="preview-card__caption"></p>
+        <button class="preview-card__button-close" type="button"></button>
+      </div>
+    </div>
+
+
+    <template class="cards__template">
+      <li class="cards__item">
+        <img class="cards__item-picture" src="#" alt="заготовка">
+        <img class="cards__remoover" src="./images/Recycle.svg" alt="заготовка">
+        <div class="cards__item-wrapper">
+          <h2 class="cards__item-heading"></h2>
+          <button class="cards__item-like" type="button"></button>
+        </div>
+      </li>
+    </template>
+
   <script src="./javascript/script.js"></script>
 </body>
 </html>

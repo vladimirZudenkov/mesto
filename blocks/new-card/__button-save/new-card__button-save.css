@@ -1,0 +1,32 @@
+.new-card__button-save {
+  color: #ffffff;
+  background-color: #000000;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  width: 358px;
+  height: 50px;
+  border-style: none;
+  padding: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-top: 43px;
+
+}
+
+@media screen and (max-width: 600px) {
+  .new-card__button-save {
+    width: 238px;
+    height: 46px;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 42px;
+
+  }
+}
+
+.new-card__button-save:hover {
+  opacity: .8;
+}

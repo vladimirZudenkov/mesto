@@ -1,0 +1,13 @@
+.cards__remoover {
+  position: absolute;
+  top: 18px;
+  right: 15px;
+
+}
+
+
+.cards__remoover:hover {
+  opacity: .6;
+  cursor: pointer;
+}
+
