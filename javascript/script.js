@@ -12,12 +12,12 @@ const openButton = document.querySelector('.user__edit-profile'),
   cardOverlay = document.querySelector('.new-card'),
   newCardButton = document.querySelector('.user__button'),
   cardCloseButton = document.querySelector('.new-card__button-close'),
-  newCardName = document.querySelector('.new-card__text_name'),
+  newCardName = document.querySelector('.new-card__input_text_name'),
   newCardElement = document.querySelector('.new-card__field'),
   imgPreview = document.querySelector('.preview-card'),
   imgLink = document.querySelector('.preview-card__picture'),
   imgCaption = document.querySelector('.preview-card__caption'),
-  newCardLink = document.querySelector('.new-card__text_link'),
+  newCardLink = document.querySelector('.new-card__input_text_link'),
   previewCloseBtn = document.querySelector('.preview-card__button-close');
 
   const initialCards = [

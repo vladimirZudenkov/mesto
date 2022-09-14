@@ -5,8 +5,8 @@
     background-image: url(../../../images/Close_Icon.svg);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     border-style: none;
     padding: 0;
     margin: 0;
@@ -21,10 +21,10 @@
 
 @media screen and (max-width: 600px) {
   .new-card__button-close {
-    width: 26px;
-    height: 26px;
-    right: 5px;
-    top: -45px;
+    width: 20px;
+    height: 20px;
+    right: 0;
+    top: -37px;
 
   }
 }
