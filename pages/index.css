@@ -32,7 +32,7 @@
 @import url(../blocks/cards/__item-picture/cards__item-picture.css);
 @import url(../blocks/cards/__item-wrapper/cards__item-wrapper.css);
 @import url(../blocks/cards/cards.css);
-@import url(../blocks/cards/__remoover/cards__remoover.css);
+@import url(../blocks/cards/__remover/cards__remover.css);
 @import url(../blocks/cards/__item-like/_active/cards__item-like_active.css);
 
 /* импорт стилей footer */
@@ -62,7 +62,7 @@
 
 
 
-/* импорт стилей предпросмотра изображений */ 
+/* импорт стилей предпросмотра изображений */
 @import url(../blocks/preview-card/preview-card.css);
 @import url(../blocks/preview-card/__button-close/preview-card__button-close.css);
 @import url(../blocks/preview-card/__caption/preview-card__caption.css);

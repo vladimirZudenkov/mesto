@@ -1,30 +1,5 @@
-'use strict'
-// let openButton = document.querySelector('.user__edit-profile'),
 
-
-// function openModal() {
-//   overlay.classList.add('popup_opened');
-//   autorNameInput.value = autor.textContent;
-//   autorJobeInput.value = jobeDescr.textContent;
-// }
-
-// function closeModal() {
-//   overlay.classList.remove('popup_opened');
-// }
-
-// function handleFormSubmit(evt) {
-//   evt.preventDefault();
-//   autor.textContent = autorNameInput.value;
-//   jobeDescr.textContent = autorJobeInput.value;
-//   closeModal(); 
-// }
-
-// openButton.addEventListener('click', openModal);
-// closeButton.addEventListener('click', closeModal);
-// formElement.addEventListener('submit', handleFormSubmit);
-
-
-let openButton = document.querySelector('.user__edit-profile'), 
+const openButton = document.querySelector('.user__edit-profile'),
   overlay = document.querySelector('.popup'),
   closeButton = overlay.querySelector('.popup__button-close'),
   autor = document.querySelector('.user__title'),
@@ -32,7 +7,7 @@ let openButton = document.querySelector('.user__edit-profile'),
   autorNameInput = overlay.querySelector('.popup__input_text_name'),
   autorJobeInput = overlay.querySelector('.popup__input_text_description'),
   formElement = overlay.querySelector('.popup__field'),
-  cardsContainer = document.querySelector('.cards__container'), 
+  cardsContainer = document.querySelector('.cards__container'),
   cardsTemplate = document.querySelector('.cards__template').content,
   cardOverlay = document.querySelector('.new-card'),
   newCardButton = document.querySelector('.user__button'),
@@ -40,7 +15,7 @@ let openButton = document.querySelector('.user__edit-profile'),
   newCardName = document.querySelector('.new-card__text_name'),
   newCardElement = document.querySelector('.new-card__field'),
   imgPreview = document.querySelector('.preview-card'),
-  imglink = document.querySelector('.preview-card__picture'),
+  imgLink = document.querySelector('.preview-card__picture'),
   imgCaption = document.querySelector('.preview-card__caption'),
   newCardLink = document.querySelector('.new-card__text_link'),
   previewCloseBtn = document.querySelector('.preview-card__button-close');
@@ -70,12 +45,12 @@ let openButton = document.querySelector('.user__edit-profile'),
       name: 'Байкал',
       link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
     }
-  ]; 
+  ];
 
-const сards = initialCards.reverse();
+const cards = initialCards.reverse();
 
 function render() {
-  сards.forEach(createCards);
+  cards.forEach(createCards);
 }
 
 function handleFormSubmit(evt) {
@@ -96,13 +71,12 @@ function createCards(cards) {
 }
 
 function setListeners(element) {
-
-  element.querySelector('.cards__remoover').addEventListener('click', handleRemoover);
+  element.querySelector('.cards__remover').addEventListener('click', handleRemover);
   element.querySelector('.cards__item-like').addEventListener('click', handleLike);
   element.querySelector('.cards__item-picture').addEventListener('click', handlePreview);
 }
 
-function handleRemoover(evt) {
+function handleRemover(evt) {
   evt.target.closest('.cards__item').remove();
 }
 
@@ -112,7 +86,7 @@ function handleLike(evt) {
 
 function handlePreview(evt) {
   openModal(imgPreview);
-  imglink.src = evt.target.src;
+  imgLink.src = evt.target.src;
   imgCaption.textContent = evt.target.alt;
 
 }
@@ -123,7 +97,6 @@ function handleCardSubmit(evt) {
     name: newCardName.value,
     link: newCardLink.value
   };
-
   createCards(newCard);
   addingCardClose();
 }
@@ -162,7 +135,6 @@ function closeModal(item) {
   item.classList.remove('popup_opened');
 }
 
-
 openButton.addEventListener('click', addingUserForm);
 closeButton.addEventListener('click', userFormClose);
 formElement.addEventListener('submit', handleFormSubmit);
@@ -174,7 +146,3 @@ newCardElement.addEventListener('submit', handleCardSubmit);
 render();
 
 
-
-
-
-//cardOverlay.addEventListener('submit', handleCardSubmit);

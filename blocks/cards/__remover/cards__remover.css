@@ -1,4 +1,4 @@
-.cards__remoover {
+.cards__remover {
   position: absolute;
   top: 18px;
   right: 15px;
@@ -6,7 +6,7 @@
 }
 
 
-.cards__remoover:hover {
+.cards__remover:hover {
   opacity: .6;
   cursor: pointer;
 }
