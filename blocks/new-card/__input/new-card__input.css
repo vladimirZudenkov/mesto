@@ -1,4 +1,4 @@
-.new-card__text {
+.new-card__input {
   border-style: none;
   border-bottom: 1px solid rgb(0,0,0, 0.2);
   max-width: 358px;
@@ -14,10 +14,10 @@
   padding-bottom: 13px;
 }
 
-.new-card__text::placeholder {
+.new-card__input::placeholder {
   color: #C4C4C4;
 }
 
-.new-card__text:nth-child(2) {
+.new-card__input:nth-child(2) {
   margin-top: 26px;
 }

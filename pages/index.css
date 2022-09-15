@@ -53,7 +53,7 @@
 @import url(../blocks/new-card/__container/new-card__container.css);
 @import url(../blocks/new-card/__field/new-card__field.css);
 @import url(../blocks/new-card/__button-close/new-card__button-close.css);
-@import url(../blocks/new-card/__text/new-card__text.css);
+@import url(../blocks/new-card/__input/new-card__input.css);
 @import url(../blocks/new-card/__button-save/new-card__button-save.css);
 @import url(../blocks/new-card/__heading/new-card__heading.css);
 
