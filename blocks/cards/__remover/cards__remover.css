@@ -2,9 +2,7 @@
   position: absolute;
   top: 18px;
   right: 15px;
-
 }
-
 
 .cards__remover:hover {
   opacity: .6;

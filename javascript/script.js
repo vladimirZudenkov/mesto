@@ -110,8 +110,9 @@ function addingUserForm() {
 
 function addingCardForm() {
   openModal(cardOverlay);
-  newCardName.value = "Название";
-  newCardLink.value = "Ссылка на картинку";
+  newCardName.value = "";
+  newCardLink.value = "";
+  
 }
 
 

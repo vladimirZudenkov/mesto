@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,24 +55,23 @@
       <div class="new-card__container">
       <h2 class="new-card__heading">Новое место</h2>
       <form class="new-card__field" name="new-card-modal">
-        
         <input class="new-card__text new-card__input_text_name" type="text" name="new-place" value="" placeholder="Название">
         <input class="new-card__text new-card__input_text_link" name="autor-descr" type="text" value="" placeholder="Ссылка на картинку">
-      
         <input class="new-card__button-save" type="submit" name="submit-btn" value="Создать">
         <button class="new-card__button-close" type="button"></button>
       </form>
-    </div>
+      </div>
     </div>
 
     <div class="preview-card popup">
+      <div class="preview-card__background-mask">
       <div class="preview-card__field">
         <img class="preview-card__picture" src="#" alt="заготовка">
         <p class="preview-card__caption"></p>
         <button class="preview-card__button-close" type="button"></button>
       </div>
     </div>
-
+    </div>
 
     <template class="cards__template">
       <li class="cards__item">
