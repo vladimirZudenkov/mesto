@@ -3,17 +3,16 @@
   border-bottom: 1px solid rgb(0,0,0, 0.2);
   max-width: 358px;
   width: 100%;
-  padding: 0;
   box-sizing: border-box;
   outline: none;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;
-  padding-bottom: 13px;
-  margin: 27px 0 0;
+  padding: 0 0 13px;
+
 }
 
 .popup__input:nth-child(2) {
   margin: 26px 0 0;
-} 
+}

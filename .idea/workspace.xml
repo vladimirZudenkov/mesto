@@ -2,8 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a3c8830-f272-4f32-854b-554a941ed879" name="Changes" comment="button close  0px --&gt; 0;">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/cards/__item-like/_active/cards__item-like_active.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/cards/__item-like/_active/cards__item-like_active.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/cards/__remover/cards__remover.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/cards/__remover/cards__remover.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/new-card/__button-close/new-card__button-close.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/new-card/__button-save/new-card__button-save.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/new-card/__container/new-card__container.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/new-card/__field/new-card__field.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/new-card/__heading/new-card__heading.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/new-card/__input/new-card__input.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/new-card/__input/new-card__input.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__container/popup__container.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__container/popup__container.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__heading/popup__heading.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__heading/popup__heading.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__input/popup__input.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__input/popup__input.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/preview-card/__button-close/preview-card__button-close.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/preview-card/__field/preview-card__field.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/preview-card/__field/preview-card__field.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javascript/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,22 +32,24 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2ERPvmYvvmtNoE81H1ZiBJUM78N" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -46,7 +63,8 @@
       <workItem from="1662631161484" duration="226000" />
       <workItem from="1663171706744" duration="171000" />
       <workItem from="1663173796863" duration="955000" />
-      <workItem from="1663177910853" duration="875000" />
+      <workItem from="1663177910853" duration="1255000" />
+      <workItem from="1663497506987" duration="7178000" />
     </task>
     <task id="LOCAL-00001" summary="косячу с вебштормом">
       <created>1662556554708</created>

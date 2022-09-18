@@ -1,12 +1,12 @@
 
-const openButton = document.querySelector('.user__edit-profile'),
-  overlay = document.querySelector('.popup'),
-  closeButton = overlay.querySelector('.popup__button-close'),
+const userOpenButton = document.querySelector('.user__edit-profile'),
+  userOverlay = document.querySelector('.user-form'),
+  userCloseButton = userOverlay.querySelector('.popup__button-close'),
   autor = document.querySelector('.user__title'),
   jobeDescr = document.querySelector('.user__profession'),
-  autorNameInput = overlay.querySelector('.popup__input_text_name'),
-  autorJobeInput = overlay.querySelector('.popup__input_text_description'),
-  formElement = overlay.querySelector('.popup__field'),
+  autorNameInput = userOverlay.querySelector('.popup__input_text_name'),
+  autorJobeInput = userOverlay.querySelector('.popup__input_text_description'),
+  userFormElement = userOverlay.querySelector('.popup__field'),
   cardsContainer = document.querySelector('.cards__container'),
   cardsTemplate = document.querySelector('.cards__template').content,
   cardOverlay = document.querySelector('.new-card'),
@@ -20,54 +20,32 @@ const openButton = document.querySelector('.user__edit-profile'),
   newCardLink = document.querySelector('.new-card__input_text_link'),
   previewCloseBtn = document.querySelector('.preview-card__button-close');
 
-  const initialCards = [
-    {
-      name: 'Архыз',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-    },
-    {
-      name: 'Челябинская область',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-    },
-    {
-      name: 'Иваново',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-    },
-    {
-      name: 'Камчатка',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-    },
-    {
-      name: 'Холмогорский район',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-    },
-    {
-      name: 'Байкал',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-    }
-  ];
 
 const cards = initialCards.reverse();
 
 function render() {
-  cards.forEach(createCards);
+  cards.forEach(renderCard);
+}
+
+function renderCard(cards) {
+  cardsContainer.prepend(createCard(cards));
 }
 
 function handleFormSubmit(evt) {
   evt.preventDefault();
   autor.textContent = autorNameInput.value;
   jobeDescr.textContent = autorJobeInput.value;
-  closeModal(overlay);
+  closeModal(userOverlay);
 }
 
-function createCards(cards) {
+function createCard(cards) {
   const cardsElement = cardsTemplate.cloneNode(true);
   cardsElement.querySelector('.cards__item-picture').src = cards.link;
   cardsElement.querySelector('.cards__item-picture').alt = cards.name;
   cardsElement.querySelector('.cards__item-heading').textContent = cards.name;
-
   setListeners(cardsElement);
-  cardsContainer.prepend(cardsElement);
+
+  return cardsElement;
 }
 
 function setListeners(element) {
@@ -88,6 +66,7 @@ function handlePreview(evt) {
   openModal(imgPreview);
   imgLink.src = evt.target.src;
   imgCaption.textContent = evt.target.alt;
+  imgLink.alt = evt.target.alt;
 
 }
 
@@ -97,22 +76,21 @@ function handleCardSubmit(evt) {
     name: newCardName.value,
     link: newCardLink.value
   };
-  createCards(newCard);
+  renderCard(newCard);
   addingCardClose();
 }
 
 
 function addingUserForm() {
-  openModal(overlay);
+  openModal(userOverlay);
   autorNameInput.value = autor.textContent;
   autorJobeInput.value = jobeDescr.textContent;
 }
 
 function addingCardForm() {
   openModal(cardOverlay);
-  newCardName.value = "";
-  newCardLink.value = "";
-  
+  newCardElement.reset();
+
 }
 
 
@@ -121,7 +99,7 @@ function addingCardClose() {
 }
 
 function userFormClose() {
-  closeModal(overlay);
+  closeModal(userOverlay);
 }
 
 function closingPreview() {
@@ -136,9 +114,9 @@ function closeModal(item) {
   item.classList.remove('popup_opened');
 }
 
-openButton.addEventListener('click', addingUserForm);
-closeButton.addEventListener('click', userFormClose);
-formElement.addEventListener('submit', handleFormSubmit);
+userOpenButton.addEventListener('click', addingUserForm);
+userCloseButton.addEventListener('click', userFormClose);
+userFormElement.addEventListener('submit', handleFormSubmit);
 newCardButton.addEventListener('click', addingCardForm);
 cardCloseButton.addEventListener('click', addingCardClose);
 previewCloseBtn.addEventListener('click', closingPreview);

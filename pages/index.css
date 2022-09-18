@@ -19,7 +19,7 @@
 @import url(../blocks/user/__info/user__info.css);
 @import url(../blocks/user/__owner/user__owner.css);
 @import url(../blocks/user/__profession/user__profession.css);
-@import url(../blocks//user/__profile/user__profile.css);
+@import url(../blocks/user/__profile/user__profile.css);
 @import url(../blocks/user/__text/user__text.css);
 @import url(../blocks/user/__title/user__title.css);
 @import url(../blocks/user/user.css);
@@ -49,16 +49,9 @@
 @import url(../blocks/popup/__heading/popup__heading.css);
 @import url(../blocks/popup/_opened/popup_opened.css);
 
-/* импорт стилей модального окна добавления карточек*/
-@import url(../blocks/new-card/__container/new-card__container.css);
-@import url(../blocks/new-card/__field/new-card__field.css);
-@import url(../blocks/new-card/__button-close/new-card__button-close.css);
-@import url(../blocks/new-card/__input/new-card__input.css);
-@import url(../blocks/new-card/__button-save/new-card__button-save.css);
-@import url(../blocks/new-card/__heading/new-card__heading.css);
+
 
 /* импорт стилей предпросмотра изображений */
-@import url(../blocks/preview-card/__button-close/preview-card__button-close.css);
 @import url(../blocks/preview-card/__caption/preview-card__caption.css);
 @import url(../blocks/preview-card/__field/preview-card__field.css);
 @import url(../blocks/preview-card/__picture/preview-card__picture.css);

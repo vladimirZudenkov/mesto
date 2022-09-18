@@ -2,6 +2,11 @@
   position: absolute;
   top: 18px;
   right: 15px;
+  background-image: url(./../../../images/Recycle.svg);
+  background-color: transparent;
+  border: none;
+  width: 18px;
+  height: 20px;
 }
 
 .cards__remover:hover {
