@@ -79,7 +79,7 @@ function handleCardSubmit(evt) {
   renderCard(newCard);
   addingCardClose();
 
-  const addCardSubmitButton =  newCardElement.querySelector('.popup__button');
+  const addCardSubmitButton =  newCardElement.querySelector('.popup__button-save');
   addCardSubmitButton.classList.add('popup__button_disabled');
   newCardElement.reset();
 }
@@ -98,7 +98,7 @@ function addingCardForm() {
 }
 
 function closeByClick (evt) {
-  const popUpActive = document.querySelector('.popup_active');
+  const popUpActive = document.querySelector('.popup_opened');
   if (evt.target === popUpActive) {
   closeModal(popUpActive);
   }
@@ -117,7 +117,7 @@ function closingPreview() {
 }
 
 function closePopupByEsc(evt) {
-  const popUpActive = document.querySelector('.popup_active');
+  const popUpActive = document.querySelector('.popup_opened');
   if (evt.key === "Escape" && popUpActive != null) {
      closeModal(popUpActive);
   }
