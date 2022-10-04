@@ -1,0 +1,21 @@
+.popup__span{
+  visibility: hidden;
+  font-size: 12px;
+  line-height: 15px;
+  color: red;
+  border-bottom-color: red;
+  max-width: 358px;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .popup__span {
+    max-width: 238px;
+    
+
+  }
+}
+
+
+
