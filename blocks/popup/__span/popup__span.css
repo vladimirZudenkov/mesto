@@ -2,9 +2,13 @@
   visibility: hidden;
   font-size: 12px;
   line-height: 15px;
-  color: red;
-  border-bottom-color: red;
+  color: #FF0000;
+  border-bottom-color: #FF0000;
   max-width: 358px;
+  min-height: 30px;
+  padding-top: 5px;
+  box-sizing: border-box;
+  
 }
 
 
