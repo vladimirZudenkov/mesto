@@ -1,7 +1,7 @@
 
 const userOpenButton = document.querySelector('.user__edit-profile'),
   userOverlay = document.querySelector('.user-form'),
-  userCloseButton = userOverlay.querySelector('.popup__button-close'),
+//  userCloseButton = userOverlay.querySelector('.popup__button-close'),
   autor = document.querySelector('.user__title'),
   jobeDescr = document.querySelector('.user__profession'),
   autorNameInput = userOverlay.querySelector('.popup__input_text_name'),
@@ -11,15 +11,15 @@ const userOpenButton = document.querySelector('.user__edit-profile'),
   cardsTemplate = document.querySelector('.cards__template').content,
   cardOverlay = document.querySelector('.new-card'),
   newCardButton = document.querySelector('.user__button'),
-  cardCloseButton = document.querySelector('.new-card__button-close'),
+//  cardCloseButton = document.querySelector('.new-card__button-close'),
   newCardName = document.querySelector('.new-card__input_text_name'),
   newCardElement = document.querySelector('.new-card__field'),
   imgPreview = document.querySelector('.preview-card'),
   imgLink = document.querySelector('.preview-card__picture'),
   imgCaption = document.querySelector('.preview-card__caption'),
   newCardLink = document.querySelector('.new-card__input_text_link'),
-  previewCloseBtn = document.querySelector('.preview-card__button-close');
- //const closeButtons = document.querySelectorAll('.popup__close');
+//  previewCloseBtn = document.querySelector('.preview-card__button-close');
+  closeButtons = document.querySelectorAll('.popup__close');
 
 
 const cards = initialCards.reverse();
@@ -82,7 +82,7 @@ function handleCardSubmit(evt) {
   closeCardPopup();
  
   evt.submitter.classList.add('popup__button_disabled');
-  //evt.submitter.setAttribute('disabled', true);
+  evt.submitter.setAttribute('disabled', true);
   newCardElement.reset();
 }
 
@@ -108,13 +108,6 @@ function closeCardPopup() {
   closeModal(cardOverlay);
 }
 
-function closeProfilePopup() {
-  closeModal(userOverlay);
-}
-
-function closePreview() {
-  closeModal(imgPreview);
-}
 
 function closePopupByEsc(evt) {
   if (evt.key === "Escape") {
@@ -137,22 +130,21 @@ function closeModal(item) {
   document.removeEventListener('keydown', closePopupByEsc);
   document.removeEventListener('mousedown', closeByClick);
 }
-/*
+
 closeButtons.forEach((button) => {
-  // находим 1 раз ближайший к крестику попап 
   const popup = button.closest('.popup');
-  // устанавливаем обработчик закрытия на крестик
-  button.addEventListener('click', () => closePopup(popup));
+  button.addEventListener('click', () => closeModal(popup));
 });
-*/
+
 
 userOpenButton.addEventListener('click', openProfilePopup);
-userCloseButton.addEventListener('click', closeProfilePopup);
+//userCloseButton.addEventListener('click', closeProfilePopup);
 userFormElement.addEventListener('submit', handleProfileSubmit);
 newCardButton.addEventListener('click', openCardPopup);
-cardCloseButton.addEventListener('click', closeCardPopup);
-previewCloseBtn.addEventListener('click', closePreview);
+//cardCloseButton.addEventListener('click', closeCardPopup);
+//previewCloseBtn.addEventListener('click', closePreview);
 newCardElement.addEventListener('submit', handleCardSubmit);
+
 
 render();
 
