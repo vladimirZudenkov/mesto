@@ -19,6 +19,7 @@ const userOpenButton = document.querySelector('.user__edit-profile'),
   imgCaption = document.querySelector('.preview-card__caption'),
   newCardLink = document.querySelector('.new-card__input_text_link'),
   previewCloseBtn = document.querySelector('.preview-card__button-close');
+ //const closeButtons = document.querySelectorAll('.popup__close');
 
 
 const cards = initialCards.reverse();
@@ -79,10 +80,9 @@ function handleCardSubmit(evt) {
   };
   renderCard(newCard);
   closeCardPopup();
-
- // const addCardSubmitButton =  newCardElement.querySelector('.popup__button-save'); //старый варинат
- // addCardSubmitButton.classList.add('popup__button_disabled'); //старый варинат
+ 
   evt.submitter.classList.add('popup__button_disabled');
+  //evt.submitter.setAttribute('disabled', true);
   newCardElement.reset();
 }
 
@@ -95,8 +95,7 @@ function openProfilePopup() {
 
 function openCardPopup() {
   openModal(cardOverlay);
- // newCardElement.reset();
-
+ 
 }
 
 function closeByClick (evt) {
@@ -118,17 +117,12 @@ function closePreview() {
 }
 
 function closePopupByEsc(evt) {
-//  const popUpActive = document.querySelector('.popup_opened');
-//  if (evt.key === "Escape" && popUpActive != null) {
-//     closeModal(popUpActive);
-//  }
-
-if (evt.key === "Escape") {
-  const popUpActive = document.querySelector(".popup_opened");
-  if (popUpActive) {
-    closeModal(popUpActive);
+  if (evt.key === "Escape") {
+   const popUpActive = document.querySelector(".popup_opened");
+   if (popUpActive) {
+     closeModal(popUpActive);
+    }
   }
-}
 }
 
 
@@ -143,6 +137,14 @@ function closeModal(item) {
   document.removeEventListener('keydown', closePopupByEsc);
   document.removeEventListener('mousedown', closeByClick);
 }
+/*
+closeButtons.forEach((button) => {
+  // находим 1 раз ближайший к крестику попап 
+  const popup = button.closest('.popup');
+  // устанавливаем обработчик закрытия на крестик
+  button.addEventListener('click', () => closePopup(popup));
+});
+*/
 
 userOpenButton.addEventListener('click', openProfilePopup);
 userCloseButton.addEventListener('click', closeProfilePopup);
