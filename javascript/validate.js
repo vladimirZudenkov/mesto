@@ -29,7 +29,19 @@ const setEventListeners = (formElement, config) => {
    inputList.forEach((inputElement) => {
     inputElement.addEventListener('input', () => {
      isValid(formElement, inputElement, config);
-     toggleButtonState(inputList, buttonElement, config);
+      toggleButtonState(inputList, buttonElement, config);
+
+     /*
+     formElement.addEventListener('reset', () => {
+      // `setTimeout` нужен для того, чтобы дождаться очищения формы и только потом вызывать `toggleButtonState`
+      setTimeout(() => {
+        toggleButtonState(inputList, buttonElement, config);
+      }, 0); // достаточно указать 0 миллисекунд, чтобы после `reset` уже сработало действие
+    });
+     
+*/
+
+
 
     });
   });

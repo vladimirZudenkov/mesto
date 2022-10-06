@@ -31,30 +31,31 @@ function renderCard(cards) {
   cardsContainer.prepend(createCard(cards));
 }
 
-function handleFormSubmit(evt) {
+function handleProfileSubmit(evt) {
   evt.preventDefault();
   autor.textContent = autorNameInput.value;
   jobeDescr.textContent = autorJobeInput.value;
   closeModal(userOverlay);
 }
 
-function createCard(cards) {
-  const cardsElement = cardsTemplate.cloneNode(true);
-  cardsElement.querySelector('.cards__item-picture').src = cards.link;
-  cardsElement.querySelector('.cards__item-picture').alt = cards.name;
-  cardsElement.querySelector('.cards__item-heading').textContent = cards.name;
-  setListeners(cardsElement);
+function createCard(item) {
+  const cardElement = cardsTemplate.cloneNode(true);
+  const cardImageData = cardElement.querySelector('.cards__item-picture');
+  cardImageData.src = item.link;
+  cardImageData.alt = item.name;
+  cardElement.querySelector('.cards__item-heading').textContent = item.name;
+  setListeners(cardElement);
 
-  return cardsElement;
+  return cardElement;
 }
 
 function setListeners(element) {
-  element.querySelector('.cards__remover').addEventListener('click', handleRemover);
+  element.querySelector('.cards__remover').addEventListener('click', handleRemove);
   element.querySelector('.cards__item-like').addEventListener('click', handleLike);
   element.querySelector('.cards__item-picture').addEventListener('click', handlePreview);
 }
 
-function handleRemover(evt) {
+function handleRemove(evt) {
   evt.target.closest('.cards__item').remove();
 }
 
@@ -77,50 +78,57 @@ function handleCardSubmit(evt) {
     link: newCardLink.value
   };
   renderCard(newCard);
-  addingCardClose();
+  closeCardPopup();
 
-  const addCardSubmitButton =  newCardElement.querySelector('.popup__button-save');
-  addCardSubmitButton.classList.add('popup__button_disabled');
+ // const addCardSubmitButton =  newCardElement.querySelector('.popup__button-save'); //старый варинат
+ // addCardSubmitButton.classList.add('popup__button_disabled'); //старый варинат
+  evt.submitter.classList.add('popup__button_disabled');
   newCardElement.reset();
 }
 
 
-function addingUserForm() {
+function openProfilePopup() {
   openModal(userOverlay);
   autorNameInput.value = autor.textContent;
   autorJobeInput.value = jobeDescr.textContent;
 }
 
-function addingCardForm() {
+function openCardPopup() {
   openModal(cardOverlay);
-  newCardElement.reset();
+ // newCardElement.reset();
 
 }
 
 function closeByClick (evt) {
-  const popUpActive = document.querySelector('.popup_opened');
-  if (evt.target === popUpActive) {
-  closeModal(popUpActive);
-  }
+  if (evt.target.classList.contains("popup_opened")) {
+  closeModal(evt.target);
+}
 }
 
-function addingCardClose() {
+function closeCardPopup() {
   closeModal(cardOverlay);
 }
 
-function userFormClose() {
+function closeProfilePopup() {
   closeModal(userOverlay);
 }
 
-function closingPreview() {
+function closePreview() {
   closeModal(imgPreview);
 }
 
 function closePopupByEsc(evt) {
-  const popUpActive = document.querySelector('.popup_opened');
-  if (evt.key === "Escape" && popUpActive != null) {
-     closeModal(popUpActive);
+//  const popUpActive = document.querySelector('.popup_opened');
+//  if (evt.key === "Escape" && popUpActive != null) {
+//     closeModal(popUpActive);
+//  }
+
+if (evt.key === "Escape") {
+  const popUpActive = document.querySelector(".popup_opened");
+  if (popUpActive) {
+    closeModal(popUpActive);
   }
+}
 }
 
 
@@ -136,12 +144,12 @@ function closeModal(item) {
   document.removeEventListener('mousedown', closeByClick);
 }
 
-userOpenButton.addEventListener('click', addingUserForm);
-userCloseButton.addEventListener('click', userFormClose);
-userFormElement.addEventListener('submit', handleFormSubmit);
-newCardButton.addEventListener('click', addingCardForm);
-cardCloseButton.addEventListener('click', addingCardClose);
-previewCloseBtn.addEventListener('click', closingPreview);
+userOpenButton.addEventListener('click', openProfilePopup);
+userCloseButton.addEventListener('click', closeProfilePopup);
+userFormElement.addEventListener('submit', handleProfileSubmit);
+newCardButton.addEventListener('click', openCardPopup);
+cardCloseButton.addEventListener('click', closeCardPopup);
+previewCloseBtn.addEventListener('click', closePreview);
 newCardElement.addEventListener('submit', handleCardSubmit);
 
 render();
