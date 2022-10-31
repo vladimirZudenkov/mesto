@@ -17,7 +17,7 @@ export default class Card {
     this._element = this._getTemplate();
     this._cardImage = this._element.querySelector('.cards__item-picture');
     this._cardLike = this._element.querySelector('.cards__item-like');
-    this._cardRemoove = this._element.querySelector('.cards__remover');
+    this._cardRemove = this._element.querySelector('.cards__remover');
     this._element.querySelector('.cards__item-heading').textContent = this._name;
     this._cardImage.src = this._link;
     this._cardImage.alt = this._name;
@@ -27,7 +27,7 @@ export default class Card {
   }
 
   _setListeners() {
-    this._cardRemoove.addEventListener('click', () => {
+    this._cardRemove.addEventListener('click', () => {
       this._handleRemoove();
     });
     this._cardLike.addEventListener('click', () => {
@@ -40,6 +40,7 @@ export default class Card {
 
   _handleRemoove() {
     this._element.remove('cards__item');
+    this._element = null;
   }
 
   _handleLike() {

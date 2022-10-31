@@ -1,7 +1,9 @@
 import Card from './Сard.js';
 import FormValidator from './FormValidator.js';
+import { formConfig, initialCards }  from './constants.js'; 
 
 const userOpenButton = document.querySelector('.user__edit-profile'),
+  popups = document.querySelectorAll('.popup'),
   userOverlay = document.querySelector('.user-form'),
   autor = document.querySelector('.user__title'),
   jobeDescr = document.querySelector('.user__profession'),
@@ -18,43 +20,9 @@ const userOpenButton = document.querySelector('.user__edit-profile'),
   imgLink = document.querySelector('.preview-card__picture'),
   imgCaption = document.querySelector('.preview-card__caption'),
   newCardLink = document.querySelector('.new-card__input_text_link'),
-  closeButtons = document.querySelectorAll('.popup__close');
+  buttonClose = document.querySelectorAll('.popup__close');
 
-  const initialCards = [
-    {
-      name: 'Архыз',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-    },
-    {
-      name: 'Челябинская область',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-    },
-    {
-      name: 'Иваново',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-    },
-    {
-      name: 'Камчатка',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-    },
-    {
-      name: 'Холмогорский район',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-    },
-    {
-      name: 'Байкал',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-    }
-  ];
-
-const formConfig = ({
-  formSelector: '.popup__field',
-  inputSelector: '.popup__input',
-  submitButtonSelector: '.popup__button-save',
-  inactiveButtonClass: 'popup__button_disabled',
-  inputErrorClass: 'popup__input_type_error',
-  errorClass: 'popup__input_error_active'
-});
+ 
 
 const userValidate = new FormValidator(formConfig, userFormElement);
 const cardValidate = new FormValidator(formConfig, newCardElement);
@@ -65,10 +33,10 @@ function render() {
   cards.forEach(renderCard);
 }
 
-function renderCard(cards) {
-  const dataCard = new Card(cards, handlePreview, cardsTemplate);
+function createCard(card) {
+  const dataCard = new Card(card, handlePreview, cardsTemplate);
   const cardElement = dataCard.generateCard();
-  createCard(cardElement);
+  return cardElement;
 }
 
 function handleProfileSubmit(evt) {
@@ -78,8 +46,8 @@ function handleProfileSubmit(evt) {
   closeModal(userOverlay);
 }
 
-function createCard(item) {
- cardsContainer.prepend(item);
+function renderCard(card) {
+ cardsContainer.prepend(createCard(card));
 }
 
 function handlePreview(name, link) {
@@ -113,11 +81,6 @@ function openCardPopup() {
   openModal(cardOverlay);
 }
 
-function closeByClick (evt) {
-  if (evt.target.classList.contains("popup_opened")) {
-  closeModal(evt.target);
-  }
-}
 
 function closeCardPopup() {
   closeModal(cardOverlay);
@@ -135,18 +98,32 @@ function closePopupByEsc(evt) {
 function openModal(item) {
   item.classList.add('popup_opened');
   document.addEventListener('keydown', closePopupByEsc);
-  document.addEventListener('mousedown', closeByClick);
 }
 
 function closeModal(item) {
   item.classList.remove('popup_opened');
   document.removeEventListener('keydown', closePopupByEsc);
-  document.removeEventListener('mousedown', closeByClick);
+ 
 }
 
-closeButtons.forEach((button) => {
+
+buttonClose.forEach((button) => {
   const popup = button.closest('.popup');
   button.addEventListener('click', () => closeModal(popup));
+});
+
+
+popups.forEach((popup) => {
+  popup.addEventListener('mousedown', (evt) => {
+      if (evt.target.classList.contains('popup_opened')) {
+      closeModal(popup)
+    }
+      if (evt.target.classList.contains('popup__close')) 
+    {
+      closeModal(popup)
+    }
+  })
+  
 });
 
 userValidate.enableValidation();

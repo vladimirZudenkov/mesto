@@ -60,15 +60,9 @@ export default class FormValidator {
     }
   }
 
-  enableValidation() {
-    const formInput = this._form.querySelectorAll(this._inputSelector);
-    formInput.forEach((formElement) => {
-      formElement.addEventListener('submit', (evt) => {
-        evt.preventDefault();
-      });
-      this._setEventListeners(formElement);
-    });
-  }
+enableValidation() {
+  this._setEventListeners(this._inputList);
+}
 
   resetValidation() {
     this._inputList.forEach((inputElement) => {
