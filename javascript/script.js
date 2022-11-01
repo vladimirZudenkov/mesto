@@ -20,7 +20,7 @@ const userOpenButton = document.querySelector('.user__edit-profile'),
   imgLink = document.querySelector('.preview-card__picture'),
   imgCaption = document.querySelector('.preview-card__caption'),
   newCardLink = document.querySelector('.new-card__input_text_link'),
-  buttonClose = document.querySelectorAll('.popup__close');
+  buttonsClose = document.querySelectorAll('.popup__close');
 
  
 
@@ -66,24 +66,23 @@ function handleCardSubmit(evt) {
   renderCard(newCard);
   closeCardPopup();
  
-  evt.submitter.classList.add('popup__button_disabled');
-  evt.submitter.setAttribute('disabled', true);
-  newCardElement.reset();
+ newCardElement.reset();
 }
 
 function openProfilePopup() {
-  openModal(userOverlay);
-  autorNameInput.value = autor.textContent;
+   openModal(userOverlay);
+   autorNameInput.value = autor.textContent;
   autorJobeInput.value = jobeDescr.textContent;
 }
 
 function openCardPopup() {
   openModal(cardOverlay);
+  cardValidate.resetValidation();
 }
-
 
 function closeCardPopup() {
   closeModal(cardOverlay);
+  
 }
 
 function closePopupByEsc(evt) {
@@ -103,15 +102,12 @@ function openModal(item) {
 function closeModal(item) {
   item.classList.remove('popup_opened');
   document.removeEventListener('keydown', closePopupByEsc);
- 
 }
 
-
-buttonClose.forEach((button) => {
+buttonsClose.forEach((button) => {
   const popup = button.closest('.popup');
   button.addEventListener('click', () => closeModal(popup));
 });
-
 
 popups.forEach((popup) => {
   popup.addEventListener('mousedown', (evt) => {
@@ -123,7 +119,6 @@ popups.forEach((popup) => {
       closeModal(popup)
     }
   })
-  
 });
 
 userValidate.enableValidation();
