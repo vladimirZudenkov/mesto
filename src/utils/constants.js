@@ -7,6 +7,7 @@ export const formConfig = ({
   errorClass: 'popup__input_error_active'
 });
 
+export const ESC = 'Escape';
 
 export const initialCards = [
   {
