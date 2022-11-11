@@ -5,6 +5,7 @@ export default class Card {
     this._link = cards.link;
     this._handlePreview = handlePreview;
     this._templateData = templateData;
+  
   }
 
   _getTemplate() {
@@ -24,6 +25,7 @@ export default class Card {
 
     this._setListeners();
     return this._element;   
+    
   }
 
   _setListeners() {
