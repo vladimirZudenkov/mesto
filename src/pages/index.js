@@ -10,7 +10,6 @@ import PopupWithImage from '../components/PopupWithImage.js';
 import PopupWithForm from '../components/PopupWithForm.js';
 import UserInfo from '../components/UserInfo.js';
 
-
 const userValidate = new FormValidator(formConfig, userFormElement);
 const cardValidate = new FormValidator(formConfig, newCardElement);
 const openImgPopup = new PopupWithImage(imgPreview);
@@ -24,7 +23,6 @@ const cardForm = new PopupWithForm(cardOverlay, (data) => {
 });
 
 const cards = initialCards.reverse();
-
 
 function handleProfileSubmit(data) {
   authorInfo.setUserInfo(data);
