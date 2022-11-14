@@ -1,14 +1,28 @@
 import {ESC} from '../utils/constants.js';
 
+// export default class Popup {
+//   constructor(popupSelector) {
+//     this._popupSelector = popupSelector;
+//     console.log(this._popupSelector);
+//     this._buttonClose = this._popupSelector.querySelector('.popup__close');
+//     this._handleEscClose = this._handleEscClose.bind(this);
+//     this._handleClickClose = this._handleClickClose.bind(this);
+//    // this._popup = this.popupSelector.querySelector('popup');
+//    console.log(popupSelector);
+//   }
+
 export default class Popup {
   constructor(popupSelector) {
-    this._popupSelector = popupSelector;
+    this._popupSelector = document.querySelector(popupSelector);
+    console.log(this._popupSelector);
     this._buttonClose = this._popupSelector.querySelector('.popup__close');
     this._handleEscClose = this._handleEscClose.bind(this);
     this._handleClickClose = this._handleClickClose.bind(this);
    // this._popup = this.popupSelector.querySelector('popup');
    console.log(popupSelector);
   }
+
+
 
   open() {
     this._popupSelector.classList.add('popup_opened');
