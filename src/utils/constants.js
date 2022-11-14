@@ -48,5 +48,7 @@ export const userOpenButton = document.querySelector('.user__edit-profile'),
   cardOverlay = document.querySelector('.new-card'),
   newCardButton = document.querySelector('.user__button'),
   newCardElement = document.querySelector('.new-card__field'),
-  imgPreview = document.querySelector('.preview-card')
+  popups = document.querySelectorAll('.popup'),
+  imgPreview = document.querySelector('.preview-card'),
+  buttonsClose = document.querySelectorAll('.popup__close');
  
