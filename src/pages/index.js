@@ -14,12 +14,12 @@ const userValidate = new FormValidator(formConfig, userFormElement);
 const cardValidate = new FormValidator(formConfig, newCardElement);
 const authorInfo = new UserInfo(autor, jobeDescr);
 
-const imagePopup = new PopupWithImage(imgPreview);            ////    ====>   imgPreview = document.querySelector('.preview-card'),
-const ownerForm = new PopupWithForm(userOverlay, (data) => {
+const imagePopup = new PopupWithImage('.preview-card');            ////    ====>   imgPreview = document.querySelector('.preview-card'),
+const ownerForm = new PopupWithForm('.user-form', (data) => {
   handleProfileSubmit(data);
 });
 
-const cardForm = new PopupWithForm(cardOverlay, (data) => {
+const cardForm = new PopupWithForm('.new-card', (data) => {
   handleCardSubmit(data);
 });
 
