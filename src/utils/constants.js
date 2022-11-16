@@ -45,12 +45,7 @@ export const userOpenButton = document.querySelector('.user__edit-profile'),
   userFormElement = userOverlay.querySelector('.popup__field'),
   cardsContainer = document.querySelector('.cards__container'),
   cardsTemplate = document.querySelector('.cards__template').content,
-  //cardOverlay = document.querySelector('.new-card'),
-  cardOverlay = '.new-card',
   newCardButton = document.querySelector('.user__button'),
-  newCardElement = document.querySelector('.new-card__field'),
-  popups = document.querySelectorAll('.popup'),
-  //imgPreview = document.querySelector('.preview-card'),
-  imgPreview = '.preview-card',
-  buttonsClose = document.querySelectorAll('.popup__close');
+  newCardElement = document.querySelector('.new-card__field')
+ 
  
