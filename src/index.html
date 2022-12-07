@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Красивые места</title>
-  <!-- <link rel="stylesheet" href="./pages/index.css"> -->
+  
 </head>
 
 <body class="body-root">
@@ -16,14 +16,16 @@
       <section class="user">
         <div class="user__profile">
           <div class="user__owner">
-           
-            <img class="user__avatar" src="<%=require('./images/custo.jpg')%>" alt="Аватар">
+           <div class="user__avatar-overlay">
+           <img class="user__avatar" src="#" alt="Аватар">
+           <button class="user__edit-avatar" type="button" ></button>
+          </div>
             <div class="user__info">
               <div class="user__text">
-                <h1 class="user__title">Жак-Ив Кусто</h1>
+                <h1 class="user__title"></h1>
                 <button class="user__edit-profile" type="button" aria-label="Редактировать профиль"></button>
               </div>
-              <p class="user__profession">Исследователь океана</p>
+              <p class="user__profession"></p>
             </div>
           </div>
           <button class="user__button" type="button" aria-label="Добавить карточку"></button>
@@ -68,6 +70,30 @@
       </div>
     </div>
 
+    <div class="popup user-avatar">
+      <div class="popup__container popup__user-avatar-container user-avatar__container">
+      <h2 class="popup__heading user-avatar__heading">Обновить аватар</h2>
+       <form class="popup__field user-avatar__field" novalidate  name="avatar" >
+         <input class="popup__input user-avatar__input" id="avatar-input" type="url" name="avatar"  required placeholder="Ссылка на картинку" >
+         <span class="popup__span avatar-input-error"></span>
+         <input  type="submit" class="popup__button-save user-avatar__button-save" name="submit-btn" value="Сохранить"></input>
+         <button class="user-avatar__button-close popup__button-close popup__close" type="button" ></button>
+        </form>
+      
+    </div>
+    </div>
+
+    <div class="popup popup__delete-card">
+      <div class="popup__container popup__delete-card-container">
+        <h2 class="popup__heading popup__delete-card-heading">Вы уверены?</h2>
+        <form novalidate  name="delete-card" class="popup__field popup__field_delete-card">
+         
+        <input class="popup__button-save popup__button_delete-card" type="submit" value="Да" name="submit-btn">
+
+        <button class="new-card__button-close popup__button-close popup__close" type="button" ></button>
+      </div>
+    </div>
+
     <div class="preview-card popup background-mask">
       <div class="preview-card__field popup__field">
         <img class="preview-card__picture" src="#" alt="заготовка">
@@ -82,15 +108,13 @@
         <button class="cards__remover" type="button"></button>
         <div class="cards__item-wrapper">
           <h2 class="cards__item-heading"></h2>
-          <button class="cards__item-like" type="button"></button>
+            <div class="cards__like-wrapper">
+              <button class="cards__item-like" type="button"></button>
+              <span class="cards__like-count">0</span>
+            </div>  
         </div>
       </li>
     </template>
-
-  <!-- <script type="module" src="./javascript/constants.js"></script>
-  <script type="module" src="./javascript/FormValidator.js"></script>
-  <script type="module" src="./javascript/Сard.js"></script>
-  <script type="module" src="./javascript/script.js"></script> -->
   
 </body>
 </html>

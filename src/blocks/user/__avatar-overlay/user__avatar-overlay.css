@@ -1,0 +1,15 @@
+
+.user__avatar-overlay {
+  position: relative;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.user__avatar-overlay::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}

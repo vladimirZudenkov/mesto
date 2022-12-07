@@ -1,21 +1,27 @@
 export default class UserInfo {
-  constructor(autorName, autorDescr) {
-    this._autorName = autorName;
-    this._autorDescr = autorDescr;
+  constructor(autorDescr, autorName, avatarImg) {
+    this._userName = document.querySelector(autorName);
+    this._autorDescr = document.querySelector(autorDescr);
+     this._avatar = document.querySelector(avatarImg);
   }
+
   getUserInfo() {
     const itemUser = {
-      user: this._autorName.textContent,
+      user: this._userName.textContent,
       about: this._autorDescr.textContent
     };
     return itemUser;
   }
+  
+  setAvatar(data) {              
+  this._avatar.src = data;
+  }
 
-  setUserInfo(data) {
-    this.name = data.user;
-    this.about = data.about;
-    this._autorName.textContent = this.name;
-    this._autorDescr.textContent = this.about;
+  setUserInfo({ _id: userId, name: title, avatar: avatar, about: description }) {
+    this.setAvatar(avatar);
+    this._userName.textContent = title;
+    this._autorDescr.textContent = description;
+    this.userId = userId;
 
   }
 
