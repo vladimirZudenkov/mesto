@@ -97,6 +97,7 @@ const cardsList = new Section({
 
 
 function handleCardSubmit(formData) {
+  cardForm.renderLoading(true);
   api.postUserCard(formData)
   .then((data) => {
     const card = {
