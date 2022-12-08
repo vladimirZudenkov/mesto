@@ -110,7 +110,8 @@ function handleCardSubmit(formData) {
     };
     
     cardsList.prependItem(renderCards(card));
-    cardValidate.resetValidation();   
+    cardForm.close();
+    
 })
 .catch((err) => {
     console.log(err);
@@ -170,7 +171,6 @@ function renderCards(cards) {
 
 function handlePreview(name, link) {
   imagePopup.open(name, link);
-  imagePopup.setEventListeners();
 };
 
 function openProfilePopup() {
@@ -200,6 +200,7 @@ avatarValidate.enableValidation();
 ownerForm.setEventListeners();
 cardForm.setEventListeners();
 userAvatar.setEventListeners();
+imagePopup.setEventListeners();
 
 
 userOpenButton.addEventListener('click', openProfilePopup);

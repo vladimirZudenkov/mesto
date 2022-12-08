@@ -13,15 +13,26 @@ export default class UserInfo {
     return itemUser;
   }
   
-  setAvatar(data) {              
-  this._avatar.src = data;
+  setAvatar(data) { 
+    if(data) {             
+  this._avatar.src = data;}
+  else {
+    this._avatar.src = "https://sun9-62.userapi.com/impg/8ZB4w-Qu5TyOgy51y3bwh9BZt4TcBq8GOVL3bg/_x0e9Jk-vSg.jpg?size=599x450&quality=96&sign=121be18995ae328000b09b2698a159cf&type=album"
+  }
   }
 
   setUserInfo({ _id: userId, name: title, avatar: avatar, about: description }) {
-    this.setAvatar(avatar);
-    this._userName.textContent = title;
-    this._autorDescr.textContent = description;
-    this.userId = userId;
+    if({userId, title, avatar, description }) {
+      this.setAvatar(avatar);
+      this._userName.textContent = title;
+      this._autorDescr.textContent = description;
+      this.userId = userId;
+    }
+    else {
+      this.setAvatar(avatar);
+      this._userName.textContent = "Данных нет Перезагрузите страничку"
+      this._autorDescr.textContent = "Данных нет Перезагрузите страничку"
+     }
 
   }
 
