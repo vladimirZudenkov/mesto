@@ -41,10 +41,10 @@
 .popup__button_disabled{background-color:transparent;border:1px solid #c4c4c4;box-sizing:border-box;color:#c4c4c4;cursor:default;opacity:1}
 .popup__input_error_active{visibility:visible}
 .popup__input_type_error{border-bottom-color:red;color:red}
-.popup__delete-card-container{min-height:-moz-min-content;min-height:min-content}
-.popup__button_delete-card{margin-top:0}
-.popup__delete-card-heading{margin:0 0 38px}
-.popup__user-avatar-container{min-height:-moz-max-content;min-height:max-content}
+.user-avatar__container{min-height:-moz-max-content;min-height:max-content}
+.delete-card__container{min-height:-moz-min-content;min-height:min-content}
+.delete-card__heading{margin:0 0 38px}
+.delete-card__button-dell{margin-top:0}
 .preview-card__caption{color:#fff;font-size:12px;font-style:normal;font-weight:400;line-height:15px;margin:0;padding-top:10px}
 .preview-card__field{background:transparent;border-radius:10px;box-shadow:0 0 25px rgba(0,0,0,.15);max-height:75vh;max-width:75vw;position:relative}
 .preview-card__picture{max-height:75vh;max-width:75vw}
