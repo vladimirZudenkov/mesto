@@ -149,12 +149,11 @@ function renderCards(cards) {
   handleDeleteCard: (data) => {
     popupWithSubmit.setSubmit(() => {
        api.remooveCard(data._id)
-          .then(({_id}) => {
+          .then(() => {
             data.deleteElementCard()
             popupWithSubmit.close();
-             
             })
-           .catch((err) => {
+            .catch((err) => {
              console.log(err)
             })
     })
