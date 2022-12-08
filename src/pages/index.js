@@ -121,7 +121,7 @@ function handleCardSubmit(formData) {
   
 };
 
-const popupWithSubmit = new PopupWithConfirmation('.popup__delete-card');
+const popupWithSubmit = new PopupWithConfirmation('.delete-card');
 
 function renderCards(cards) {
   const dataCard = new Card(cards, handlePreview, cardsTemplate,

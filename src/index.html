@@ -71,7 +71,7 @@
     </div>
 
     <div class="popup user-avatar">
-      <div class="popup__container popup__user-avatar-container user-avatar__container">
+      <div class="popup__container user-avatar__container">
       <h2 class="popup__heading user-avatar__heading">Обновить аватар</h2>
        <form class="popup__field user-avatar__field" novalidate  name="avatar" >
          <input class="popup__input user-avatar__input" id="avatar-input" type="url" name="avatar"  required placeholder="Ссылка на картинку" >
@@ -83,14 +83,12 @@
     </div>
     </div>
 
-    <div class="popup popup__delete-card">
-      <div class="popup__container popup__delete-card-container">
-        <h2 class="popup__heading popup__delete-card-heading">Вы уверены?</h2>
+    <div class="popup delete-card">
+      <div class="popup__container delete-card__container">
+        <h2 class="popup__heading   delete-card__heading">Вы уверены?</h2>
         <form novalidate  name="delete-card" class="popup__field popup__field_delete-card">
-         
-        <input class="popup__button-save popup__button_delete-card" type="submit" value="Да" name="submit-btn">
-
-        <button class="new-card__button-close popup__button-close popup__close" type="button" ></button>
+        <input class="popup__button-save delete-card__button-dell" type="submit" value="Да" name="submit-btn">
+         <button class="delete-card__button-close popup__button-close popup__close" type="button" ></button>
         </form>
       </div>
     </div>
